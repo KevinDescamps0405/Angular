@@ -20,6 +20,7 @@ export class EventsListComponent implements OnInit {
       country: 'France'
     }
   };
+
   constructor() {
   }
 
@@ -27,6 +28,7 @@ export class EventsListComponent implements OnInit {
   }
 
 
-
-
+  handleEventClicked($event: any): void {
+    console.log('click event', $event);
+  }
 }
