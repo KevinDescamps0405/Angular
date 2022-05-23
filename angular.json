@@ -31,9 +31,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+              "src/styles.scss",
+              "node_modules/ngf-bootstrap/dist/bootstrap.min.css"
+                  ],
+            "scripts": ["node_modules/jquery/dist/jquery.min.js",
+            "node_modules/bootstrap/dist/js/bootstrap.js"]
           },
           "configurations": {
             "production": {
@@ -127,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "angular-kde"
+  "defaultProject": "angular-kde",
+  "cli": {
+    "analytics": "9842173e-b3d0-4620-bec8-64e648e95efd"
+  }
 }
