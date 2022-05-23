@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {EventService} from '../shared/event.service';
 
+// @ts-ignore
+declare let toastr;
+
 @Component({
   selector: 'app-events-list',
   templateUrl: './events-list.component.html',
@@ -21,5 +24,6 @@ export class EventsListComponent implements OnInit {
 
   handleEventClicked($event: any): void {
     console.log('click event', $event);
+    toastr.success($event);
   }
 }
