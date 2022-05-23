@@ -1,1 +1,5 @@
-<app-event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></app-event-thumbnail>
+<app-event-thumbnail #thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></app-event-thumbnail>
+
+<button class="btn btn-dark" (click)="thumbnail.logFoo()">Log me some foo</button>
+
+<h2>{{thumbnail.property}}</h2>

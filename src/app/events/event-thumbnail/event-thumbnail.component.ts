@@ -11,6 +11,8 @@ export class EventThumbnailComponent implements OnInit {
 
   @Output() eventClick = new EventEmitter();
 
+  property: string = 'Test passage de valeur';
+
   constructor() {
   }
 
@@ -18,6 +20,10 @@ export class EventThumbnailComponent implements OnInit {
   }
 
   handleClickMe(): void {
-    this.eventClick.emit('foo');
+    this.eventClick.emit(this.event.name);
+  }
+
+  logFoo() {
+    console.log("foo")
   }
 }
