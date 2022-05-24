@@ -3,11 +3,12 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import { EventsListComponent } from './events/events-list/events-list.component';
-import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
-import { NavbarComponent } from './nav/navbar/navbar.component';
+import {EventsListComponent} from './events/events-list/events-list.component';
+import {EventThumbnailComponent} from './events/event-thumbnail/event-thumbnail.component';
+import {NavbarComponent} from './nav/navbar/navbar.component';
 import {EventService} from './events/shared/event.service';
-import { EventDetailsComponent } from './events/event-details/event-details.component';
+import {EventDetailsComponent} from './events/event-details/event-details.component';
+import {CreateEventComponent} from './events/create-event/create-event.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
     EventsListComponent,
     EventThumbnailComponent,
     NavbarComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,
@@ -24,4 +26,5 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
   providers: [EventService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
