@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EventService} from '../shared/event.service';
+import {ToastrService} from '../../common/toastr.service';
 
-// @ts-ignore
-declare let toastr;
 
 @Component({
   selector: 'app-events-list',
@@ -12,7 +11,7 @@ declare let toastr;
 export class EventsListComponent implements OnInit {
   events: any[] = [];
 
-  constructor(private eventService: EventService) {
+  constructor(private eventService: EventService, private toastService: ToastrService) {
 
 
   }
@@ -22,8 +21,7 @@ export class EventsListComponent implements OnInit {
   }
 
 
-  handleEventClicked($event: any): void {
-    console.log('click event', $event);
-    toastr.success($event);
+  handleEventClicked(eventName: string): void {
+    this.toastService.success(eventName);
   }
 }
