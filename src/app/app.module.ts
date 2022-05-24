@@ -13,6 +13,7 @@ import {Error404Component} from './errors/error404/error404.component';
 import {ToastrService} from './common/toastr.service';
 import {EventRouteActivatorService} from './events/event-details/event-route-activator.service';
 import {EventsListResolverService} from './events/events-list-resolver.service';
+import { ProfileComponent } from './user/profile/profile.component';
 
 export function checkDirtyState(component: CreateEventComponent) {
   if (component.isDirty) {
@@ -29,7 +30,7 @@ export function checkDirtyState(component: CreateEventComponent) {
     NavbarComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    Error404Component
+    Error404Component,
   ],
   imports: [
     BrowserModule,
